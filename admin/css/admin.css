@@ -1,0 +1,47 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.h-font{
+    font-family: 'Merienda', cursive;
+}
+
+.custom-bg{
+    background-color: #2ec1ac !important;
+    border: 1px solid #2ec1ac !important;
+}
+
+.custom-bg:hover{
+    background-color: #279e8c !important;
+    border: 1px solid #279e8c !important;
+}
+
+.h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1px;
+}
+
+#dashboard-menu{
+    position: fixed;
+    height: 100%;
+}
+
+#custom-alert{
+    position: fixed;
+    top: 80px;
+    right: 25px;
+}
+
+.align-middle{
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 991px) {
+    #dashboard-menu{
+        position: sticky;
+        height: auto;
+        width: 100%;
+    }
+}

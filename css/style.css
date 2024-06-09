@@ -1,0 +1,262 @@
+*, *::before, *::after{
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.h-font{
+    font-family: 'Merienda', cursive;
+}
+
+.custom-bg{
+    background-color: #C1B086 !important;
+    border: 1px solid #C1B086 !important;
+}
+
+.custom-bg:hover{
+    background-color: #c3a165 !important;
+    border: 1px solid #c3a165 !important;
+}
+
+.h-line{
+    width: 150px;
+    margin: 0 auto;
+    height: 1px;
+}
+
+.heading {
+    position: relative;
+}
+  
+.heading::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #C1B086;
+}
+
+.heading h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+    color: #222222;
+  }
+  
+  .restaurant h2 {
+    font-weight: 400;
+  }
+  
+  .accordionItem {
+    padding: 5px 0;
+    border-top: 1px solid gray;
+    padding-top: 5px;
+  }
+  
+  .accordionItem p {
+    font-size: 15px;
+    opacity: 0.8;
+    font-family: sans-serif;
+    line-height: 20px;
+  }
+  
+  .accordionIHeading {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 17px;
+    color: black;
+  }
+  
+  .close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    transform: scaleY(0);
+    float: left;
+    display: block;
+    background-color: #fff;
+  }
+  
+  .open .accordionItemContent {
+    padding: 30px;
+    background-color: #fff;
+    width: 100%;
+    margin: 0 0 10px 0;
+    display: block;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+    box-shadow: 0 13px 43px 0 rgb(37 46 89 / 10%);
+  }
+
+.footer{
+  background: url(../images/about/about-5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.footer::before{
+  background-color: #242632F2;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+
+.youtube_overlay{
+  background-color: #0000004a;
+}
+
+.memory-section{
+  padding: 100px 0 0 0;
+  position: relative;
+}
+
+.memory-item{
+  background-color: white;
+  position: relative;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.memory-item::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 38px;
+  background-color: #c3a165;
+  top: -20px;
+  left: -20px;
+}
+
+.memory-item::after {
+  position: absolute;
+  content: "";
+  height: 38px;
+  width: 10px;
+  background-color: #c3a165;
+  top: -20px;
+  left: -20px;
+}
+
+.memory-content{
+  height: 100%;
+}
+
+.dot-image{
+  z-index: 0;
+  position: absolute;
+  top: -175px;
+  left: -20px;
+  
+}
+
+.intro-title::after{
+  margin: 20px 0;
+  content: "";
+  display: block;
+  width: 75px;
+  height: 2px;
+  background-color: #c3a165;
+} 
+
+.memory-item .memory-btn .memory-btn-one {
+  display: inline-block;
+  color: #c3a165;
+  font-weight: 500;
+  transition-behavior: normal;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+}
+
+.memory-item .memory-btn .memory-btn-one:hover{
+  letter-spacing: 1px;
+}
+
+#toastBox{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+  
+}
+
+.toastCustom{
+  width: auto;
+  height: 80px;
+  background: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: black;
+  position: relative;
+  padding-right: 20px;
+}
+
+.toastCustom .icon{
+  margin: 0 20px;
+  font-size: 35px;
+}
+
+.toastCustom.green::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  animation: anim 5s linear forwards;
+}
+
+.toastCustom.red::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background-color: red;
+  animation: anim 5s linear forwards;
+}
+
+.toastCustom.yellow::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  bottom: 0;
+  background-color: yellow;
+  animation: anim 5s linear forwards;
+}
+
+@keyframes anim {
+  100%{
+    width: 0;
+  }
+}
+
+#toastConfirm{
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid;
+  z-index: 10000;
+}
